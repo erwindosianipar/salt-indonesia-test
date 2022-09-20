@@ -16,6 +16,10 @@ class ViewController: UIViewController {
         
         self.view.backgroundColor = .systemBackground
         setupNavigationComponent()
+        
+        NotificationCenter.default.addObserver(self,
+            selector: #selector(configureView),
+            name: Notification.Name("INJECTION_BUNDLE_NOTIFICATION"), object: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -37,6 +41,10 @@ class ViewController: UIViewController {
         }
         
         return controllers
+    }
+    
+    @objc private func configureView() {
+        viewDidLoad()
     }
 }
 

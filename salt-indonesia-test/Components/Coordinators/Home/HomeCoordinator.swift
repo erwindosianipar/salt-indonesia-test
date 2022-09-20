@@ -33,18 +33,6 @@ internal final class HomeCoordinator: NavigationCoordinator {
     }
     
     func showScreen(identifier: String, navigation: Navigation) {
-        switch identifier {
-        case kHomeScreen:
-            setHomeScreenNavigation(navigation: navigation)
-        default:
-            break
-        }
-    }
-    
-    private func setHomeScreenNavigation(navigation: Navigation) {
-        switch navigation {
-        case .next, .prev:
-            return
-        }
+        // Implement show screen here
     }
 }
