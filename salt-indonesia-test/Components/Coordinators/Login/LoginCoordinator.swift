@@ -33,22 +33,6 @@ internal final class LoginCoordinator: NavigationCoordinator {
     }
     
     func showScreen(identifier: String, navigation: Navigation) {
-        switch identifier {
-        case kLoginScreen:
-            setLoginScreenNavigation(navigation: navigation)
-        default:
-            break
-        }
-    }
-    
-    private func setLoginScreenNavigation(navigation: Navigation) {
-        switch navigation {
-        case .next(let value):
-            if let result = value as? HomeScreenResult {
-                push(HomeScreen(result))
-            }
-        case .prev:
-            return
-        }
+        // Implement show screen here
     }
 }

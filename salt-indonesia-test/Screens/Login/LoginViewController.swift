@@ -23,18 +23,18 @@ internal final class LoginViewController: ViewController {
     private let emailTextField = UITextField().then {
         $0.borderStyle = .roundedRect
         $0.placeholder = "Email Address"
-        $0.layer.cornerRadius = 3
+        $0.layer.cornerRadius = 5
     }
     
     private let passwordTextField = UITextField().then {
         $0.borderStyle = .roundedRect
         $0.placeholder = "Password"
-        $0.layer.cornerRadius = 3
+        $0.layer.cornerRadius = 5
     }
     
     private let submitButton = UIButton().then {
         $0.backgroundColor = .link
-        $0.layer.cornerRadius = 3
+        $0.layer.cornerRadius = 5
         $0.setTitle("Login", for: .normal)
         $0.addTarget(self, action: #selector(onTapButtonSubmit), for: .touchUpInside)
     }
@@ -60,17 +60,25 @@ internal final class LoginViewController: ViewController {
         setupStackView()
     }
     
+    private func setupLargeTitleAndSearchView() {
+        self.title = "Login"
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+        self.navigationItem.largeTitleDisplayMode = .automatic
+    }
+    
     private func setupStackView() {
+        setupLargeTitleAndSearchView()
+        
         view.addSubview(scrollView)
         scrollView.snp.makeConstraints {
-            $0.top.equalToSuperview().offset(40)
-            $0.bottom.equalToSuperview()
+            $0.top.bottom.equalToSuperview()
             $0.leading.trailing.equalToSuperview().inset(20)
         }
         
         scrollView.addSubview(stackView)
         stackView.snp.makeConstraints {
-            $0.edges.equalToSuperview()
+            $0.top.equalTo(scrollView.snp.top).offset(20)
+            $0.leading.trailing.bottom.equalToSuperview()
             $0.width.equalTo(scrollView)
         }
         
@@ -91,7 +99,11 @@ internal final class LoginViewController: ViewController {
                         return
                     }
                     UserDefaultConfig.email = email
-                    self?.navigationEvent.send(.next(HomeScreenResult(email: email)))
+                    guard let appDelegate = UIApplication.shared.delegate as? AppDelegate, let window = appDelegate.window else {
+                        return
+                    }
+                    let homeCoordinator = HomeCoordinator(window: window)
+                    homeCoordinator.start()
                 },
                 onError: { [weak self] error in
                     self?.view.toggleLoadingIndicator()
