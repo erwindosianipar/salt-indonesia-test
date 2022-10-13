@@ -39,7 +39,6 @@
 		FAF313DF27B7D8370068C1D4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF313DE27B7D8370068C1D4 /* HomeViewController.swift */; };
 		FAF313E127B7D8DC0068C1D4 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF313E027B7D8DC0068C1D4 /* HomeScreen.swift */; };
 		FAF313EE27B7FE910068C1D4 /* APIProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF313ED27B7FE910068C1D4 /* APIProvider.swift */; };
-		FAF313F227B817CE0068C1D4 /* WeatherEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF313F127B817CE0068C1D4 /* WeatherEndpoint.swift */; };
 		FAF313FA27B830EC0068C1D4 /* BaseEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF313F927B830EC0068C1D4 /* BaseEndpoint.swift */; };
 		FAF3140627B83F3E0068C1D4 /* String+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF3140527B83F3E0068C1D4 /* String+Helper.swift */; };
 		FAF3140827B83F680068C1D4 /* AppDelegate+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF3140727B83F680068C1D4 /* AppDelegate+Helper.swift */; };
@@ -87,7 +86,6 @@
 		FAF313DE27B7D8370068C1D4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		FAF313E027B7D8DC0068C1D4 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		FAF313ED27B7FE910068C1D4 /* APIProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIProvider.swift; sourceTree = "<group>"; };
-		FAF313F127B817CE0068C1D4 /* WeatherEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherEndpoint.swift; sourceTree = "<group>"; };
 		FAF313F927B830EC0068C1D4 /* BaseEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseEndpoint.swift; sourceTree = "<group>"; };
 		FAF313FB27B838AD0068C1D4 /* RxCocoa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RxCocoa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAF313FC27B838AD0068C1D4 /* RxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -327,7 +325,6 @@
 		FAF313F027B817A70068C1D4 /* Endpoints */ = {
 			isa = PBXGroup;
 			children = (
-				FAF313F127B817CE0068C1D4 /* WeatherEndpoint.swift */,
 				FAC5472F28D9697300AA312B /* ReqresEndpoint.swift */,
 			);
 			path = Endpoints;
@@ -491,7 +488,6 @@
 				FAC211C727B680E400C14536 /* AppDelegate.swift in Sources */,
 				FAA5AA7227B8DCA000B4A6B4 /* UIImage+Properties.swift in Sources */,
 				FAA5AA9227B9785C00B4A6B4 /* NavigationItemRightView.swift in Sources */,
-				FAF313F227B817CE0068C1D4 /* WeatherEndpoint.swift in Sources */,
 				FAA5AA7027B8DBD400B4A6B4 /* NavigationItemLeftView.swift in Sources */,
 				FAF313FA27B830EC0068C1D4 /* BaseEndpoint.swift in Sources */,
 				FAF3140A27B83F860068C1D4 /* UITableView+Helper.swift in Sources */,
